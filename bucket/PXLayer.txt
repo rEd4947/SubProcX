@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0",
+  "description": "Official Rockstar Games Launcher",
+  "homepage": "https://socialclub.rockstargames.com/rockstar-games-launcher",
+  "license": "Proprietary",
+  "architecture": {
+    "64bit": {
+      "url": "https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe",
+      "hash": "skip"
+    }
+  },
+  "installer": {
+    "file": "Rockstar-Games-Launcher.exe",
+    "args": [
+      "/S"
+    ],
+    "keep": true
+  },
+  "uninstaller": {
+    "script": [
+      "$uninstallPath = \"$env:ProgramFiles\\Rockstar Games\\Launcher\\Uninstall.exe\"",
+      "if (Test-Path $uninstallPath) { & $uninstallPath /S }"
+    ]
+  },
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe"
+      }
+    }
+  }
+}
