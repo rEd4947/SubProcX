@@ -6,7 +6,7 @@
   "architecture": {
     "64bit": {
       "url": "https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe",
-      "hash": "skip"
+      "hash": ""
     }
   },
   "installer": {
